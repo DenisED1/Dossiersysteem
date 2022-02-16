@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700" prefWidth="1000" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="artre.dossiersysteem.AddEmployeeController">
+   <children>
+      <Button layoutX="34.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToTransfer" text="Overdragen" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <Button layoutX="136.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToTakeover" text="Overnemen" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="20.0" />
+      <Button layoutX="258.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToAddEmployee" text="Werknemer Toevoegen" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="20.0" />
+      <Button layoutX="506.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToSelectClient" text="Terug" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <AnchorPane layoutX="22.0" layoutY="66.0" prefHeight="319.0" prefWidth="557.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Label layoutX="291.0" layoutY="47.0" text="Client Nr.:" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="30.0" />
+            <TextField fx:id="clientNrTxt" layoutX="367.0" layoutY="43.0" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="28.0" />
+            <Label layoutX="240.0" layoutY="115.0" text="Werknemers:" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="80.0" />
+            <Label layoutX="466.0" layoutY="124.0" text="Toegevoegd:" AnchorPane.leftAnchor="540.0" AnchorPane.topAnchor="80.0" />
+            <ListView fx:id="lvEmployee" layoutX="32.0" layoutY="205.0" prefHeight="350.0" prefWidth="250.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="100.0" />
+            <Button layoutX="367.0" layoutY="264.0" mnemonicParsing="false" onAction="#addEmployee" text="Toevoegen --&gt;" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="200.0" />
+            <Button layoutX="367.0" layoutY="318.0" mnemonicParsing="false" onAction="#removeEmployee" text="&lt;-- Verwijderen" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="250.0" />
+            <ListView fx:id="lvAdded" layoutX="480.0" layoutY="205.0" prefHeight="350.0" prefWidth="250.0" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="100.0" />
+            <Button layoutX="336.0" layoutY="476.0" mnemonicParsing="false" onAction="#confirmAddEmployee" text="Bevestig" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="475.0" />
+            <Label fx:id="warningLbl" layoutX="282.0" layoutY="7.0" prefHeight="18.0" prefWidth="504.0" text="Error Message" textFill="RED" visible="false" AnchorPane.leftAnchor="281.0" AnchorPane.topAnchor="6.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

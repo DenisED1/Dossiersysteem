@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700" prefWidth="1000" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="artre.dossiersysteem.TransferController">
+   <children>
+      <Button layoutX="34.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToTransfer" text="Overdragen" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <Button layoutX="136.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToTakeover" text="Overnemen" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="20.0" />
+      <Button layoutX="258.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToAddEmployee" text="Werknemers Koppelen" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="20.0" />
+      <Button layoutX="506.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToSelectClient" text="Terug" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <AnchorPane layoutX="22.0" layoutY="66.0" prefHeight="319.0" prefWidth="557.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Label layoutX="292.0" layoutY="53.0" text="Client Nr.:" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="30.0" />
+            <TextField fx:id="clientNrTxt" layoutX="355.0" layoutY="49.0" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="28.0" />
+            <Label layoutX="292.0" layoutY="118.0" text="Handtekening Client:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="80.0" />
+            <Label fx:id="fileNameLbl" layoutX="402.0" layoutY="118.0" text="Bestandsnaam" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="80.0" />
+            <Button layoutX="529.0" layoutY="114.0" mnemonicParsing="false" onAction="#selectFile" text="Selecteer Document" AnchorPane.leftAnchor="380.0" AnchorPane.topAnchor="80.0" />
+            <Label layoutX="292.0" layoutY="181.0" text="Nieuwe Behandelaar:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0" />
+            <ChoiceBox fx:id="cbWorker" layoutX="419.0" layoutY="177.0" prefWidth="150.0" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="130.0" />
+            <Button layoutX="430.0" layoutY="237.0" mnemonicParsing="false" onAction="#confirmTransfer" text="Bevestig" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="180.0" />
+            <Label fx:id="warningLbl" layoutX="182.0" layoutY="7.0" prefHeight="18.0" prefWidth="570.0" text="Error Message" textFill="RED" visible="false" AnchorPane.leftAnchor="181.0" AnchorPane.topAnchor="6.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
